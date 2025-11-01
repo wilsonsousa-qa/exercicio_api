@@ -15,3 +15,12 @@ Para executar este projeto, siga os passos abaixo:
 
 ```bash
 cd caminho/para/o/diretório/primeiraApi
+
+Use o comando mvn spring-boot:run para iniciar o projeto:
+
+mvn spring-boot:run
+
+Certifique-se de substituir caminho/para/o/diretório/primeiraApi pelo caminho real do diretório do seu projeto.
+
+Documentação da API
+A documentação da API está disponível no Swagger UI. Após iniciar o aplicativo, você pode acessar a documentação em http://localhost:8080/swagger-ui.html.
