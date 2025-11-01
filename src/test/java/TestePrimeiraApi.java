@@ -40,4 +40,23 @@ public class TestePrimeiraApi {
 
 
     }
+
+    @Test
+    public void exercicio03_TestePathParamPrimeiraApi(){
+
+        String textPathParam = "Teste Qa";
+        String url= "http://localhost:8080/api/primeiraApiV2/"+textPathParam;
+
+        RestAssured.given()
+                .log().all()
+                .when()
+                .get(url)
+                .then()
+                .log().all()
+                .assertThat()
+                .statusCode(200)
+                .body(Matchers.containsString(textPathParam));
+
+
+    }
 }
