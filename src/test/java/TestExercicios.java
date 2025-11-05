@@ -41,4 +41,24 @@ public class TestExercicios {
 
 
     }
+
+    @Test
+    public void exercicio06_TesteCpfValido(){
+
+        String url= "http://localhost:8080/exercicios/validarCpf";
+        String cpf = "64622821001";
+
+        RestAssured.given()
+                .log().all()
+                .queryParam("cpf",cpf)
+                .when()
+                .get(url)
+                .then()
+                .log().all()
+                .assertThat()
+                .statusCode(200)
+                .body(Matchers.equalTo("CPF Valido"));
+
+
+    }
 }

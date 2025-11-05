@@ -10,14 +10,14 @@ public class TestePrimeiraApi {
         String url= "http://localhost:8080/api/primeiraApi";
 
         RestAssured.given()
-                                .log().all()
+                    .log().all()
                     .when()
-                                .get(url)
+                    .get(url)
                     .then()
-                                .log().all()
-                                .assertThat()
-                                .statusCode(200)
-                                .body(Matchers.containsString("Retorno da api com sucesso!!!"));
+                    .log().all()
+                    .assertThat()
+                    .statusCode(200)
+                    .body(Matchers.containsString("Retorno da api com sucesso!!!"));
 
 
     }
